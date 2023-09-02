@@ -8,27 +8,27 @@ const CurrencyConverter = () => {
         setINR(val)
         setDollar(itod(val));
     }
-    
+
     const HandleDollar = (e) => {
         const val = e.target.value;
         setDollar(val)
         setINR(dtoi(val));
     }
     const itod = (INR) => {
-        return INR*0.012;
+        return INR * 0.012;
     }
     const dtoi = (Dollar) => {
-        return Dollar*82.72;
+        return Dollar * 82.72;
     }
     return (
         <div>
             <div>Dollar-INR Converter</div>
             <div>
-                <label>Dollar</label>
+                <label>Dollar:- </label>
                 <input type="text" value={Dollar} onChange={HandleDollar} />
             </div>
             <div>
-                <label>INR</label>
+                <label>INR:- </label>
                 <input type="text" value={INR} onChange={HandleINR} />
             </div>
         </div>
